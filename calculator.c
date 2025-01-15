@@ -1,24 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float mult(float x, float y) {
-    float a = x * y;
-    return a;
+void mult(float x, float y, float* a) {
+    *a = x * y;
 }
 
-float divide(float num, float denom) {
-    float a = num / denom;
-    return a;
+void divide(float num, float denom, float* a) {
+    *a = num / denom;
 }
 
-float add(float x, float y) {
-    float a = x+y;
-    return a;
+void add(float x, float y, float* a) {
+    *a = x+y;
 }
 
-float sub(float x, float y) {
-    float a = x-y;
-    return a;
+void sub(float x, float y, float* a) {
+    *a = x-y;
 }
 
 int main() {
@@ -40,22 +36,21 @@ int main() {
 
     switch (op) {
         case 'x': case '*':
-            mult(x,y);
+            mult(x,y, &a);
             break;
         case '/':
-            divide(x,y);
+            divide(x,y, &a);
             break;
         case '+':
-            add(x,y);
+            add(x,y, &a);
             break;
         case '-':
-            sub(x,y);
+            sub(x,y, &a);
             break;
         default:
             printf("Invalid Operator. Please Try Again.");
     }
 
     printf("\nAnswer: %f ", a);
-
     return 0;
 }
