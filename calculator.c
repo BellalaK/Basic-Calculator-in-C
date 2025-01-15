@@ -20,7 +20,7 @@ int main() {
     scanf("%d", &x);
 
     printf("\nEnter your operator: ");
-    scanf("%c", &op); 
+    scanf(" %c", &op); 
 
     printf("\nEnter the second number: ");
     scanf("%d", &y);
@@ -41,6 +41,8 @@ int main() {
         default:
             printf("Invalid Operator. Please Try Again.");
     }
+
+    printf("\nAnswer: %d ", a);
 
     return 0;
 }
