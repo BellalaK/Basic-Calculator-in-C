@@ -21,7 +21,7 @@ float sub(float x, float y) {
     return a;
 }
 
-float main() {
+int main() {
     float x;
     float y;
     char op;
@@ -30,13 +30,13 @@ float main() {
     printf("Welcome to Bella's Basic Calculator\n");
 
     printf("Enter the first number: ");
-    scanf("%d", &x);
+    scanf("%f", &x);
 
     printf("\nEnter your operator: ");
     scanf(" %c", &op); 
 
     printf("\nEnter the second number: ");
-    scanf("%d", &y);
+    scanf("%f", &y);
 
     switch (op) {
         case 'x': case '*':
@@ -55,7 +55,7 @@ float main() {
             printf("Invalid Operator. Please Try Again.");
     }
 
-    printf("\nAnswer: %d ", a);
+    printf("\nAnswer: %f ", a);
 
     return 0;
 }
