@@ -3,16 +3,9 @@
 
 int main() {
     int x;
-    //int* xPtr = (int*) malloc(x*sizeof(int));
-
     int y;
-    //int* yPtr = (int*) malloc(y*sizeof(int));
-
     char op;
-    //int* opPtr = (int*) malloc(sizeof(op)*sizeof(char));
-
     int a;
-    //int* aPtr = (int*) malloc(a*sizeof(int));
 
     printf("Welcome to Bella's Basic Calculator\n");
 
