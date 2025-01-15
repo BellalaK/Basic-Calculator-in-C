@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11
+TARGET = calculator
+
+all: $(TARGET)
+
+$(TARGET): calculator.o
+    $(CC) $(CFLAGS) -o $(TARGET) calculator.o
+
+calculator.o: calculator.c
+    $(CC) $(CFLAGS) -c calculator.c
+
+clean:
+    rm -f $(TARGET) *.o
