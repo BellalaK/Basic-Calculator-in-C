@@ -1,11 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    int x;
-    int y;
+float mult(float x, float y) {
+    float a = x * y;
+    return a;
+}
+
+float divide(float num, float denom) {
+    float a = num / denom;
+    return a;
+}
+
+float add(float x, float y) {
+    float a = x+y;
+    return a;
+}
+
+float sub(float x, float y) {
+    float a = x-y;
+    return a;
+}
+
+float main() {
+    float x;
+    float y;
     char op;
-    int a;
+    float a;
 
     printf("Welcome to Bella's Basic Calculator\n");
 
@@ -20,16 +40,16 @@ int main() {
 
     switch (op) {
         case 'x': case '*':
-            a = x * y;
+            mult(x,y);
             break;
         case '/':
-            a = x / y;
+            divide(x,y);
             break;
         case '+':
-            a = x + y;
+            add(x,y);
             break;
         case '-':
-            a = x - y;
+            sub(x,y);
             break;
         default:
             printf("Invalid Operator. Please Try Again.");
