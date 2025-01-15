@@ -1,41 +1,56 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void mult(float x, float y, float* a) {
+    *a = x * y;
+}
+
+void divide(float num, float denom, float* a) {
+    *a = num / denom;
+}
+
+void add(float x, float y, float* a) {
+    *a = x+y;
+}
+
+void sub(float x, float y, float* a) {
+    *a = x-y;
+}
+
 int main() {
-    int x;
-    int y;
+    float x;
+    float y;
     char op;
-    int a;
+    float a;
 
     printf("Welcome to Bella's Basic Calculator\n");
 
     printf("Enter the first number: ");
-    scanf("%d", &x);
+    scanf("%f", &x);
 
     printf("\nEnter your operator: ");
     scanf(" %c", &op); 
 
     printf("\nEnter the second number: ");
-    scanf("%d", &y);
+    scanf("%f", &y);
 
     switch (op) {
         case 'x': case '*':
-            a = x * y;
+            mult(x,y, &a);
             break;
         case '/':
-            a = x / y;
+            divide(x,y, &a);
             break;
         case '+':
-            a = x + y;
+            add(x,y, &a);
             break;
         case '-':
-            a = x - y;
+            sub(x,y, &a);
             break;
         default:
             printf("Invalid Operator. Please Try Again.");
     }
 
-    printf("\nAnswer: %d ", a);
-
+    printf("\nAnswer: %f ", a);
     return 0;
 }
